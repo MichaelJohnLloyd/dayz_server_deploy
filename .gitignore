@@ -1,3 +1,5 @@
-password.key
-private_key.key
-terraform.tfstate
+*/password.key
+*/private_key.key
+*.tfstate
+*.tfstate.*
+*/.terraform/:
