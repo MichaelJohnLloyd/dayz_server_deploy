@@ -42,3 +42,8 @@ resource "local_file" "password" {
     content  = random_password.password.result
     filename = "password.key"
 }
+
+resource "local_file" "ip" {
+  content = azurerm_linux_virtual_machine.dayz_server_vm.public_ip_address
+  filename = "ip.txt"
+}
