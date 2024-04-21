@@ -30,3 +30,4 @@ resource "azurerm_linux_virtual_machine" "dayz_server_vm" {
     storage_account_uri = azurerm_storage_account.storage.primary_blob_endpoint
   }
 }
+

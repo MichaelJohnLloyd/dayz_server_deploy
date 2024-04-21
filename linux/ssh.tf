@@ -38,6 +38,11 @@ resource "local_file" "private_key" {
     filename = "private_key.key"
 }
 
+resource "local_file" "public_key" {
+    content  = jsondecode(azapi_resource_action.ssh_public_key_gen.output).privateKey
+    filename = "public_key.key"
+}
+
 resource "local_file" "password" {
     content  = random_password.password.result
     filename = "password.key"
