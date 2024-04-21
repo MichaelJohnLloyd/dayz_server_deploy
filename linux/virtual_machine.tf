@@ -29,5 +29,10 @@ resource "azurerm_linux_virtual_machine" "dayz_server_vm" {
   boot_diagnostics {
     storage_account_uri = azurerm_storage_account.storage.primary_blob_endpoint
   }
+
+user_data = base64encode(data.template_file.init.rendered)
+
 }
+
+
 
