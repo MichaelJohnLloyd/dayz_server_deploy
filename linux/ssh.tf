@@ -39,7 +39,7 @@ resource "local_file" "private_key" {
 }
 
 resource "local_file" "public_key" {
-    content  = jsondecode(azapi_resource_action.ssh_public_key_gen.output).privateKey
+    content  = jsondecode(azapi_resource_action.ssh_public_key_gen.output).publicKey
     filename = "public_key.key"
 }
 
